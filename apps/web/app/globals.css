@@ -1,0 +1,16 @@
+*{box-sizing:border-box}
+:root{color-scheme:light;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#f4f7f5;color:#14231b}
+body{margin:0;min-height:100vh}
+.shell{min-height:100vh;display:grid;place-items:center;padding:32px}
+.hero{width:min(820px,100%);padding:clamp(28px,6vw,64px);border:1px solid #dce7df;border-radius:28px;background:rgba(255,255,255,.94);box-shadow:0 24px 70px rgba(20,50,35,.09)}
+.eyebrow{font-size:12px;font-weight:800;letter-spacing:.16em;color:#557064}
+h1{margin:18px 0 16px;font-size:clamp(48px,8vw,88px);line-height:.94;letter-spacing:-.055em}
+.lede{max-width:680px;margin:0;font-size:clamp(18px,2.4vw,24px);line-height:1.5;color:#587064}
+.status-card{display:flex;gap:14px;align-items:flex-start;margin-top:36px;padding:20px;border:1px solid #dce7df;border-radius:18px;background:#fbfdfb}
+.status-card p{margin:6px 0 0;color:#667b70;line-height:1.5}
+.status-dot{width:10px;height:10px;margin-top:5px;flex:0 0 auto;border-radius:999px;background:#2d9b61}
+.checks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:18px}
+.check{display:flex;gap:10px;align-items:center;padding:12px 14px;border-radius:12px;background:#f3f8f4;color:#345146;font-size:14px}
+.check span:first-child{font-weight:800}
+footer{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin-top:22px;color:#667b70;font-size:13px}
+@media(max-width:600px){.shell{padding:18px}.hero{padding:26px 22px;border-radius:22px}.checks{grid-template-columns:1fr}footer{margin-top:18px;text-align:center}}
