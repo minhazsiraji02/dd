@@ -31,5 +31,8 @@ create table if not exists audit.event (
 
 create index if not exists audit_event_resource_idx on audit.event (resource_type, resource_id);
 
-comment on table events.outbox is 'Transactional outbox foundation.';
+alter table events.outbox enable row level security;
+alter table audit.event enable row level security;
+
+comment on table events.outbox is 'Transactional outbox foundation; browser/API roles receive no direct access.';
 comment on table audit.event is 'Append-oriented audit foundation; avoid unnecessary raw clinical content.';
