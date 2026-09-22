@@ -4,7 +4,7 @@ export type SupabasePublicConfig = {
 };
 
 export function getSupabasePublicConfig(
-  env: NodeJS.ProcessEnv = process.env
+  env: Record<string, string | undefined> = process.env
 ): SupabasePublicConfig {
   const url = env.NEXT_PUBLIC_SUPABASE_URL;
   const anonKey = env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
